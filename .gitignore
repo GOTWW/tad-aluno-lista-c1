@@ -1,0 +1,4 @@
+/lista_demo
+*.o
+*.exe
+.DS_Store

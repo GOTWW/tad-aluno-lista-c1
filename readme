@@ -1,0 +1,8 @@
+#compilar
+make
+
+#executar
+./lista_demo
+
+#testar com valgrind 
+valgrind --leak-check=full ./lista_demo
