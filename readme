@@ -1,6 +1,24 @@
-#compilar
+Lista TAD em C
+
+Compilar:
 make
 
-#executar
+Executar:
 ./lista_demo
 
+Funções:
+- Criar lista de alunos  
+- Inserir aluno  
+- Imprimir lista de alunos  
+- Buscar aluno por matrícula  
+- Alterar nota de aluno  
+- Remover aluno da lista  
+
+Comandos utilizados:
+- Bool
+- Void
+- Static
+- Return
+- Typedef struct
+- malloc/free/realloc
+- Const
