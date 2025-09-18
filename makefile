@@ -1,19 +1,18 @@
 CC = gcc
 CFLAGS = -std=c11 -Wall -Wextra -O2
-SRCDIR = src
-OBJ = $(SRCDIR)/aluno.o $(SRCDIR)/main.o
+OBJ = aluno.o main.o
 TARGET = alunos
 
 all: $(TARGET)
 
-$(SRCDIR)/aluno.o: $(SRCDIR)/aluno.c $(SRCDIR)/aluno.h
-	$(CC) $(CFLAGS) -c $< -o $@
+aluno.o: aluno.c aluno.h
+	$(CC) $(CFLAGS) -c aluno.c -o aluno.o
 
-$(SRCDIR)/main.o: $(SRCDIR)/main.c $(SRCDIR)/aluno.h
-	$(CC) $(CFLAGS) -c $< -o $@
+main.o: main.c aluno.h
+	$(CC) $(CFLAGS) -c main.c -o main.o
 
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
 
 clean:
-	rm -f $(SRCDIR)/*.o $(TARGET)
+	rm -f *.o $(TARGET)
